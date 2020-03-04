@@ -9,6 +9,9 @@ Rails.application.configure do
   # Do not eager load code on boot.
   config.eager_load = false
 
+  # use env var to set a custom host
+  config.hosts << ENV['USE_HOST'] if ENV['USE_HOST']
+
   # Show full error reports.
   config.consider_all_requests_local = true
 
